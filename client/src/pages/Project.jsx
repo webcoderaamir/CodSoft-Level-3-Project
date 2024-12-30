@@ -63,7 +63,7 @@ const Project = () => {
   };
 
   const fetchTask = async () => {
-    const response = await fetch("http://localhost:5001/api/projectTask", {
+    const response = await fetch("http://localhost:4001/api/projectTask", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -110,7 +110,7 @@ const Project = () => {
 
   const handleDelete = async () => {
     if (window.confirm("Are you sure you want to delete")) {
-      const response = await fetch(`http://localhost:5001/api/${data._id}`, {
+      const response = await fetch(`http://localhost:4001/api/${data._id}`, {
         method: "DELETE",
       });
       const json_data = await response.json();
@@ -123,7 +123,7 @@ const Project = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5001/api/addTask", {
+      const response = await fetch("http://localhost:4001/api/addTask", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -100,7 +100,7 @@ const Home = () => {
   };
 
   const fetchProject = async () => {
-    const response = await fetch("http://localhost:5001/api/userProjects", {
+    const response = await fetch("http://localhost:4001/api/userProjects", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -115,7 +115,7 @@ const Home = () => {
 
   const fetchUser = async () => {
     try {
-      const response = await fetch("http://localhost:5001/api/userid", {
+      const response = await fetch("http://localhost:4001/api/userid", {
         method: "GET",
       });
       if (!response.ok) {
@@ -165,7 +165,7 @@ const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5001/api/createProject", {
+    const response = await fetch("http://localhost:4001/api/createProject", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

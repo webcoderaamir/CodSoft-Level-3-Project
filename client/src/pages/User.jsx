@@ -64,7 +64,7 @@ const User = () => {
   const handleSignUpSubmit = async (e) => {
     e.preventDefault();
     // Add your sign-up logic here
-    const response = await fetch("http://localhost:5001/api/createUser", {
+    const response = await fetch("http://localhost:4001/api/createUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -84,7 +84,7 @@ const User = () => {
   const handleSignInSubmit = async (e) => {
     e.preventDefault();
     // Add your sign-in logic here
-    const response = await fetch("http://localhost:5001/api/loginUser", {
+    const response = await fetch("http://localhost:4001/api/loginUser", {
       method : "POST",
       headers : {   // for cors
         "Content-Type" : "application/json",
